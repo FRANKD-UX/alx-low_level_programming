@@ -1,13 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "main.h"
-
 /*
  * Function prototypes
  */
 int _isupper(int c);
 void someFunction(void);
+int _isdigit(int c);
 
 /*
  * Constants or macros
