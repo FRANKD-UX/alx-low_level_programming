@@ -9,6 +9,11 @@ void someFunction(void);
 int _isdigit(int c);
 
 /*
+ * Function prototype for mul
+ */
+int mul(int a, int b);
+
+/*
  * Constants or macros
  */
 #define MAX_SIZE 100
