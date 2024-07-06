@@ -18,5 +18,11 @@ int mul(int a, int b);
  */
 #define MAX_SIZE 100
 
+/*
+ * Function prototypes for print_numbers and _putchar
+ */
+int _putchar(char c);
+void print_numbers(void);
+
 #endif /* MAIN_H */
 
