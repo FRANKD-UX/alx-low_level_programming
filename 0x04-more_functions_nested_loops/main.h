@@ -7,22 +7,19 @@
 int _isupper(int c);
 void someFunction(void);
 int _isdigit(int c);
+int mul(int a, int b);
+int _putchar(char c);
+void print_numbers(void);
 
 /*
- * Function prototype for mul
+ * Function prototype for print_most_numbers
  */
-int mul(int a, int b);
+void print_most_numbers(void);
 
 /*
  * Constants or macros
  */
 #define MAX_SIZE 100
-
-/*
- * Function prototypes for print_numbers and _putchar
- */
-int _putchar(char c);
-void print_numbers(void);
 
 #endif /* MAIN_H */
 
