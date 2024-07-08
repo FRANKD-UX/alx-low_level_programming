@@ -67,6 +67,12 @@ void print_line(int n);
  */
 void print_diagonal(int n);
 
+/**
+ * print_square - Prints a square of size n.
+ * @size: The size of the square.
+ */
+void print_square(int size);
+
 /*
  * Constants or macros
  */
