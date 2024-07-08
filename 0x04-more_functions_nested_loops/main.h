@@ -73,6 +73,12 @@ void print_diagonal(int n);
  */
 void print_square(int size);
 
+/**
+ * print_triangle - Prints a triangle of size n using '#'.
+ * @size: The size of the triangle.
+ */
+void print_triangle(int size);
+
 /*
  * Constants or macros
  */
