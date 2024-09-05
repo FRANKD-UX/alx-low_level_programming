@@ -4,7 +4,7 @@
 /**
  * main - check the code
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -17,7 +17,6 @@ int main(void)
 	{
 		printf("%s\n", f);
 	}
-
 	return (0);
 }
 

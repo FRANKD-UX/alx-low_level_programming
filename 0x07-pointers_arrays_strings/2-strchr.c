@@ -1,23 +1,30 @@
 #include "main.h"
+#include <stddef.h> /* For NULL */
 
 /**
-  * _strchr - main function
-  *
-  * @s: Function parameter
-  *
-  * @c: Function parameter
-  *
-  * Return: Always o.
-  */
+ * _strchr - locates a character in a string
+ * @s: the string to be searched
+ * @c: the character to locate
+ *
+ * Return: pointer to the first occurrence of the character c
+ * in the string s, or NULL if the character is not found
+ */
 char *_strchr(char *s, char c)
 {
-	int k;
-
-	for (k = 0; s[k] >= '\0'; k++)
+	while (*s != '\0')
 	{
-	if (s[k] == c)
-	return (s + k);
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
 	}
-	return (0);
+
+	if (*s == c) /* Check for the null terminator */
+	{
+		return (s);
+	}
+
+	return (NULL); /* Ensure NULL is returned when not found */
 }
 
