@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - Demonstrates the use of pointers to modify an array indirectly.
- *
- * Return: Always 0.
- */
+/**main - Demonstrates the use of pointers to modify an array indirectly.*/
 int main(void)
 {
 	int n;
