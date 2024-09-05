@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h> /* Include string.h for strcat */
+#include <string.h> /* Include for strcat */
 
 /**
  * main - check the code
@@ -9,15 +9,16 @@
  */
 int main(void)
 {
-	char s[200]; /* Adjust size as needed */
+	char s[256] = "";  /* Buffer to hold the concatenated string */
+	char part1[] =
+		"ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) ";
+	char part2[] =
+		"is a simple letter substitution cipher.\n";
 	char *p;
 
-	/* Initialize the string */
-	s[0] = '\0'; /* Start with an empty string */
-
-	/* Concatenate string parts to avoid breaking a single quoted string */
-	strcat(s, "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) ");
-	strcat(s, "is a simple letter substitution cipher.\n");
+	/* Concatenate strings using strcat */
+	strcat(s, part1);
+	strcat(s, part2);
 
 	p = rot13(s);
 	printf("%s", p);
