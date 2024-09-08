@@ -12,6 +12,7 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_prime_helper(int n, int i); /* Prototype for prime helper function */
 int _sqrt_recursion(int n);
+int is_prime_number(int n);
 
 #endif
 
