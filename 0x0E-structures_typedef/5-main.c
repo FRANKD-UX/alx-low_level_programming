@@ -18,6 +18,7 @@ int main(void)
 	}
 	printf("My name is %s, and I am %.1f :) - Woof!\n",
 	       my_dog->name, my_dog->age);
+	free_dog(my_dog);  /* Free the allocated memory */
 	return (0);
 }
 
