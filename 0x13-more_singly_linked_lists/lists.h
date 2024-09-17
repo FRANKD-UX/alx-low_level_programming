@@ -22,5 +22,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n); /* Add this line */
 size_t listint_len(const listint_t *h);
 void free_listint(listint_t *head);
 void free_listint2(listint_t **head);
+int pop_listint(listint_t **head);
 
 #endif /* LISTS_H */
