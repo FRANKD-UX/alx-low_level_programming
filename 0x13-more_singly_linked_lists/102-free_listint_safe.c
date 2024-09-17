@@ -1,56 +1,47 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_listint_safe - frees a listint_t list, including loops
- * @h: double pointer to the head of the list
+ * free_listint_safe - Frees a listint_t list and handles loops.
+ * @h: A pointer to the pointer to the head of the list.
  *
- * Return: the size of the list that was free’d
- * Sets the head to NULL after freeing the list
+ * Return: The size of the list that was freed.
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *slow, *fast, *temp;
+	listint_t *current, *next;
 	size_t count = 0;
+	listint_t *slow, *fast;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 
 	slow = *h;
 	fast = *h;
-
-	while (slow)
+	while (fast && fast->next)
 	{
-		count++;
-		temp = slow;
 		slow = slow->next;
-		free(temp);
-
-		if (fast && fast->next)
+		fast = fast->next->next;
+		if (slow == fast)
 		{
-			fast = fast->next->next;
-			if (slow == fast)
+			slow = *h;
+			while (slow != fast)
 			{
-				/* If a loop is detected, free remaining part */
-				while (slow != fast->next)
-				{
-					temp = slow;
-					slow = slow->next;
-					free(temp);
-					count++;
-				}
-				free(slow);
-				count++;
-				break;
+				slow = slow->next;
+				fast = fast->next;
 			}
-		}
-		else
-		{
-			fast = NULL;
+			break;
 		}
 	}
 
-	*h = NULL; /* Set head to NULL after freeing the list */
+	while (*h && (*h != slow || count == 0))
+	{
+		current = *h;
+		*h = (*h)->next;
+		free(current);
+		count++;
+	}
+	*h = NULL;
+
 	return (count);
 }
 
