@@ -1,3 +1,1 @@
-# Writing the result to the file
-with open("102-result", "w") as file:
-    file.write("906609")
+906609
